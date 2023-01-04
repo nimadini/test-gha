@@ -2,6 +2,8 @@ name: Call Other Flows
 on:
   push:
     branches: [ master ]
+    
+  workflow_dispatch:
 
 jobs:
   lets_call:
