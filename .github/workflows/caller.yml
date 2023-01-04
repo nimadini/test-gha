@@ -1,0 +1,12 @@
+name: Call Other Flows
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  lets_call:
+
+    strategy:
+      matrix:
+        target: [dev, qa]
+    uses: ./.github/workflows/matrix-run.yml
