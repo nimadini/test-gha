@@ -1,0 +1,16 @@
+name: Run jobs
+
+on:
+  workflow_call:
+
+  workflow_dispatch:
+
+jobs:
+  mytask:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        scope: [A, B]
+        task: [job1, job2]
+    steps:
+      - run: echo ${{ matrix.scope }}-${{ matrix.task }}
