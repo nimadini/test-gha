@@ -9,4 +9,5 @@ jobs:
     strategy:
       matrix:
         target: [dev, qa]
+
     uses: ./.github/workflows/matrix-run.yml
